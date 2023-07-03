@@ -18,7 +18,7 @@ function SingIn(){
     const {email, password} = signInFields;
 
     const handleSubmit = async (event)=>{
-        event.stopPropogation();
+        event.preventDefault();
         try{
             if(!email || !password ) return ;
             const user = await signInWithYourEmailandPassword(email,password);
@@ -31,10 +31,7 @@ function SingIn(){
     }
 
     const signInWithGoogle = async ()=>{
-        const response = await signInWithGooglePopup();
-        console.log({response});
-        const userDocRef = await createUserDocumentFromAuth(response.user);
-        console.log({userDocRef});
+        await signInWithGooglePopup();
     }
 
     const handleChange = (event)=>{

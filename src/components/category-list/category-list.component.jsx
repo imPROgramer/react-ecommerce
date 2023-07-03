@@ -5,7 +5,7 @@ function CatergoryList({categories}){
     
     return (
         <div className="categories-container">
-            {categories.map(category => <CatergoryItem category={category}></CatergoryItem>) }  
+            {categories.map(category => <CatergoryItem category={category} key={category.id}></CatergoryItem>) }  
         </div>
     )
 }
