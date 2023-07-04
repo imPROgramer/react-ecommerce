@@ -13,22 +13,6 @@ import "./authentication.styles.scss";
 
 function Authentication(){
 
-    // useEffect(() => {
-    //     async function getResponseForSignWithRedirect(){
-    //         const response = await getRedirectResult(auth);
-    //         if(response){
-    //             const userDocRef = await createUserDocumentFromAuth(response.user);
-    //             console.log({userDocRef});        
-    //         }
-    //         console.log({response});
-    //     };
-    //     getResponseForSignWithRedirect();
-    // },[]);
-    // const logGoogleRedirectUser = async ()=>{
-    //     const response = await signInWithGoogleRedirect();
-    //     console.log({response});
-    // }
-
     return (
         <div className='authentication-container'>
             <SignIn></SignIn>
