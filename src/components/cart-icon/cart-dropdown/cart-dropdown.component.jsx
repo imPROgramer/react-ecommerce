@@ -7,10 +7,13 @@ import Button from '../../button/button.component';
 import { CartContext } from '../../../context/cart.context';
 
 function CartDropdown(){
-    const {cartItems} = useContext(CartContext);
+    const {cartItems, setIsOpen} = useContext(CartContext);
     const navigate = useNavigate();
 
-    const gotoCheckoutHandler = ()=>navigate('checkout')
+    const gotoCheckoutHandler = ()=>{
+        navigate('checkout')
+        setIsOpen(false);
+    }
     return (
         <div className='cart-dropdown-container'>
             {!cartItems && <span className='empty-message'>Your cart is empty</span>}

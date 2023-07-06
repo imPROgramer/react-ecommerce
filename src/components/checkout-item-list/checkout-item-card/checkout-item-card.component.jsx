@@ -19,9 +19,9 @@ function CheckoutItemCard({cartItem}){
             </div>
             <span className='name'>{name}</span>
             <span className='quantity'>
-                <span className='arrow' onClick={decrementHandler}> {'<'} </span>
+                <span className='arrow' onClick={decrementHandler}> &#10094; </span>
                 <span className='value'>{quantity}</span>
-                <span className='arrow' onClick={incrementHandler}> {'>'} </span>
+                <span className='arrow' onClick={incrementHandler}> &#10095; </span>
             </span>
             <span className='price'> {price} </span>
             <div className='remove-button' onClick={deleteHandler}> &#10005; </div>
